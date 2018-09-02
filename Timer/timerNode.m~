@@ -1,0 +1,10 @@
+ip = '127.0.0.1'; %ip
+node_timer = robotics.ros.Node('node_timer', ip);
+
+%cria timer (time_delay, {callBack, param1, param2, ...})
+timerPub = robotics.ros.Publisher(node_timer,'/timer_topic','std_msgs/String')
+timerMsg = rosmessage(timerPub);
+
+timerMsg.Data = 'HEELLOOO';
+handler.pub = 
+rosTimer = ExampleHelperROSTimer(time_delay, {@CallBackFunction,params});
