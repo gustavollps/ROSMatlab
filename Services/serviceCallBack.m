@@ -1,4 +1,4 @@
 function resp = serviceCallBack(~,req,resp)
-    disp('HEELO')
+    disp('HELLO')
     resp.Sum = req.A + req.B;
 end
