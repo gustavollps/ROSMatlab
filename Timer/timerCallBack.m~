@@ -1,8 +1,0 @@
-function timerCallBack(~,~,param) 
-        
-       msg = rosmessage(param.pub);
-       ros
-       send(param.pub,param.msg);
-       disp("RODOU") 
-  
-end
