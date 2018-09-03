@@ -7,6 +7,8 @@ node_1 = robotics.ros.Node('node_1', ip);
 
 %registra o publisher
 twistPub = robotics.ros.Publisher(node_1,'/pose','geometry_msgs/Twist');
+pause(1);
+
 %gera objeto de mensagem para o tópico especificado
 twistPubmsg = rosmessage(twistPub);
 %carrega mensagem
@@ -19,4 +21,4 @@ twistSub = robotics.ros.Subscriber(node_1,'/pose');
 pause(1);   %tempo para garantir subscribe no tópico
 send(twistPub, twistPubmsg);
 pause(0.1);   %tempo para callback ser chamada e a mensagem recebida
-data = twistSub.LatestMessage
+data = twistSub.LatestMessage %ou    data = receive(twistSub)

@@ -5,6 +5,6 @@ function timerCallBack(~,~,param)
        msg.Data = sprintf('Data %d', i);
        i = i+1;
        send(param.pub,msg);
-       disp("RODOU") 
+       disp(sprintf("RODOU %d",i)) 
   
 end
