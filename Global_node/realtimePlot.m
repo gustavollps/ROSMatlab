@@ -1,5 +1,5 @@
 clear;
-MODO_LGBT = true;
+MODO_LGBT = false;
 %cria subscriber
 subscribe = rossubscriber('/turtle1/pose',@callback);
 
@@ -32,5 +32,5 @@ while true
     end
     
     %pausa para não jogar um loop INFINITO-INFINITAMENTE rápido
-    pause(0.05);
+    pause(1/62.5);
 end

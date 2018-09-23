@@ -22,7 +22,7 @@ disp('Subscribed to joints topic')
 % Assign the joint positions from the joint states message to the fields of
 % a configuration struct that the |pr2| object understands.
 jntPos = exampleHelperJointMsgToStruct(pr2, jntState);
-%show(pr2,jntPos)
+show(pr2,jntPos)
 
 
 % In this example we will only be controlling the robot's arms. Therefore
@@ -145,13 +145,13 @@ for i = 1: length(motionTask)
     end
 
     % Visualize robot motion and end-effector trajectory in MATLAB(R)
-    %  hold on
-    % for j = 1:numWaypoints
-    %     show(pr2, jntPosWaypoints(j,:),'PreservePlot', false);
-    %     exampleHelperShowEndEffectorPos(TWaypoints(:,:,j));
-    %     drawnow;
-    %     pause(0.1);
-    % end
+    hold on
+    for j = 1:numWaypoints
+        show(pr2, jntPosWaypoints(j,:),'PreservePlot', false);
+        exampleHelperShowEndEffectorPos(TWaypoints(:,:,j));
+        drawnow;
+        pause(0.1);
+    end
 
     % Send the right arm trajectory to the robot
     rGoalMsg.Trajectory.Points = jntTrajectoryPoints;
