@@ -1,5 +1,6 @@
 % rArm is the right arm object to control, rGoalMsg is the msg to send
 % the client
+
 [rArm, rGoalMsg] = rosactionclient('r_arm_controller/joint_trajectory_action');
 % wait to the connection
 waitForServer(rArm);

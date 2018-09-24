@@ -20,9 +20,9 @@ function I = colorfilter(image, range)
     
     % Saturation is modified according to the mask
     
-    %I(:,:,1) = mask;
+    I(:,:,1) = mask;
     %I(:,:,2) = mask;
-    I(:,:,3) = mask;
+    %I(:,:,3) = mask;
 
     
     % HSV to RGB conversion
